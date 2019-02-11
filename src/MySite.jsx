@@ -3,6 +3,8 @@ import ReactDOM from 'react-dom';
 import './MySite.less';
 
 
+const imageUrl = 'https://media.gettyimages.com/photos/domestic-cat-picture-id172727025?s=612x612';
+
 const links = [
   { label: 'About us', url: '#' },
   { label: 'Blog', url: '#' },
@@ -10,12 +12,27 @@ const links = [
 ];
 
 const sections = [
-  { heading: 'Section 1', content: 'content 1', imageUrl: 'https://media.gettyimages.com/photos/domestic-cat-picture-id172727025?s=612x612' },
+  { heading: 'Section 1', content: 'content 1', imageUrl },
   { heading: 'Section 2', content: 'content 2' },
   { heading: 'Section 3', content: 'content 3' },
 ];
 
 // 1- implement a MySite component that returns Hello World
+
+// 2- implement a functional component 'Nav' that takes links and returns a nav
+
+// 3- implement a functional component 'Section' that takes a section, and returns:
+//   * a section with an h3 with the section.heading,
+//   * a paragraph with the section.content,
+//   * an image if section.imageUrl exists
+
+// 4 improve MySite component so it renders
+//   * a container div
+//   * a header element with an h1 and the Nav
+//   * a section container containing our Sections
+//   * a button that logs a message to the console
+
+// 5- see the props using react devtools
 function MySite() {
   function clickHandler() {
     console.log('You contributed!');
@@ -37,7 +54,7 @@ function MySite() {
   );
 }
 
-// 2- implement a functional component 'Nav' that takes links and returns a nav
+
 function Nav({ links }) {
   return (
     <nav className='my-nav'>
@@ -48,8 +65,7 @@ function Nav({ links }) {
   );
 }
 
-// 3- implement a functional component 'Section' that takes a section, and returns
-// a section with an h3 with the section.heading, and a paragraph with the section.content.
+
 function Section({ section }) {
   return (
     <section>
