@@ -6,9 +6,9 @@ import './MySite.less';
 const imageUrl = 'https://media.gettyimages.com/photos/domestic-cat-picture-id172727025?s=612x612';
 
 const links = [
-  { label: 'About us', url: '#' },
-  { label: 'Blog', url: '#' },
-  { label: 'Wikipedia', url: '#' },
+  { id: '1', label: 'About us', url: '#' },
+  { id: '2', label: 'Blog', url: '#' },
+  { id: '3', label: 'Wikipedia', url: '#' },
 ];
 
 const sections = [
@@ -36,50 +36,11 @@ const sections = [
 
 // 6- Put each component into its own file
 
+// 7- break up the styles so that each component gets its own LESS file.
+
+
 function MySite() {
-  function clickHandler() {
-    console.log('You contributed!');
-  }
-
-  return (
-    <div className='container'>
-      <header>
-        <h1>My Website</h1>
-        <Nav links={links} />
-      </header>
-      <div>
-        {
-          sections.map(section => <Section key={section.heading} section={section} />)
-        }
-      </div>
-      <button onClick={clickHandler}>Contribute</button>
-    </div>
-  );
-}
-
-
-function Nav({ links }) {
-  return (
-    <nav className='my-nav'>
-      {
-        links.map(link => <a key={link.label} href={link.url}>{link.label}</a>)
-      }
-    </nav>
-  );
-}
-
-
-function Section({ section }) {
-  return (
-    <section>
-      <h3>{section.heading}</h3>
-      <p>{section.content}</p>
-      {
-        section.imageUrl &&
-        <img src={section.imageUrl} alt='cat' />
-      }
-    </section>
-  );
+  return null;
 }
 
 ReactDOM.render(<MySite />, document.querySelector('#target1'));
