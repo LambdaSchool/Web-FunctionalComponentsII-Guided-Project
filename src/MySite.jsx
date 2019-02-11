@@ -16,6 +16,10 @@ function MySite() {
     { heading: 'Section 3', content: 'content 3' },
   ];
 
+  function clickHandler() {
+    console.log('You contributed!');
+  }
+
   return (
     <div className='container'>
       <header>
@@ -27,6 +31,7 @@ function MySite() {
           sections.map(section => <Section key={section.heading} section={section} />)
         }
       </div>
+      <button onClick={clickHandler}>Contribute</button>
     </div>
   );
 }
