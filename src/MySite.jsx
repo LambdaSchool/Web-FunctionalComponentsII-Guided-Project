@@ -14,10 +14,24 @@ const sections = [
   { heading: 'Section 3', content: 'content 3' },
 ];
 
-ReactDOM.render(<MySite />, document.querySelector('#target1'));
-
 class MySite extends React.Component {
   // 1- implement a constructor and initialize state to contain links and sections
+  constructor(props) {
+    super(props);
+    this.state = {
+      links,
+      sections,
+    };
+    console.log(this.state);
+  }
+
+  render() {
+    return (
+      <div>
+        My Site
+      </div>
+    );
+  }
 
   // 4- implement a render method that returns the nav and the sections
 }
