@@ -38,6 +38,8 @@ const sections = [
 
 // 7- break up the styles so that each component gets its own LESS file.
 
+// 8- use the class syntax for MySite.
+
 
 function MySite() {
   return null;
