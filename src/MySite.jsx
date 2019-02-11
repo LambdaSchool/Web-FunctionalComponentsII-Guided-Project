@@ -3,19 +3,19 @@ import ReactDOM from 'react-dom';
 import './MySite.less';
 
 
-const links = [
-  { label: 'About us', url: '#' },
-  { label: 'Blog', url: '#' },
-  { label: 'Wikipedia', url: '#' },
-];
-
-const sections = [
-  { heading: 'Section 1', content: 'content 1' },
-  { heading: 'Section 2', content: 'content 2' },
-  { heading: 'Section 3', content: 'content 3' },
-];
-
 function MySite() {
+  const links = [
+    { label: 'About us', url: '#' },
+    { label: 'Blog', url: '#' },
+    { label: 'Wikipedia', url: '#' },
+  ];
+
+  const sections = [
+    { heading: 'Section 1', content: 'content 1' },
+    { heading: 'Section 2', content: 'content 2' },
+    { heading: 'Section 3', content: 'content 3' },
+  ];
+
   return (
     <div className='container'>
       <header>
