@@ -32,13 +32,13 @@ class MySite extends React.Component {
       </div>
     );
   }
-
-  // 4- implement a render method that returns the nav and the sections
+  // 2- implement a simplistic render method that returns Hello World
+  // 5- implement a render method that returns the nav and the sections
 }
 
-// 2- implement a functional component 'Nav' that takes links and returns a nav
+// 3- implement a functional component 'Nav' that takes links and returns a nav
 
-// 3- implement a functional component 'Section' that takes { heading, content }
+// 4- implement a functional component 'Section' that takes { heading, content }
 // and returns a section with an h3 heading and a paragraph.
 
 ReactDOM.render(<MySite />, document.querySelector('#target1'));
