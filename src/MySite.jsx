@@ -33,6 +33,9 @@ const sections = [
 //   * a button that logs a message to the console
 
 // 5- see the props using react devtools
+
+// 6- Put each component into its own file
+
 function MySite() {
   function clickHandler() {
     console.log('You contributed!');
