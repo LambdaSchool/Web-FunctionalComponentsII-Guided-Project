@@ -8,8 +8,6 @@ const links = [
   { name: 'Wikipedia', url: '#' },
 ];
 
-
-
 const sections = [
   { heading: 'Section 1', content: 'content 1' },
   { heading: 'Section 2', content: 'content 2' },
