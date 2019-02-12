@@ -40,44 +40,43 @@ const sections = [
 
 // 8- use the class syntax for MySite.
 
-function clickHandler() {
-  console.log('you clicked');
-}
 
-function Greet({ name, foo, additionalGreetClass }) {
-  return (
-    <div className={`greet-container ${additionalGreetClass}`}>
-      Hello {name} {foo}
-    </div>
-  );
-}
-
-function Fruits({ fruits }) {
-  return (
-    <div>
-      {
-        fruits.length > 2 && fruits.map(
-          fruit => <div key={fruit.id}>{fruit.name}</div>,
-        )
-      }
-    </div>
-  );
-}
-
-// data-some aria-some -> just like that
-// onclick onscroll   -> camel case it!
 function MySite() {
   return (
-    <div data-friend='Tom'>
-      <Greet additionalGreetClass='pretty' name='Tom' foo='bar' />
-      <Fruits fruits={[
-        { id: 1, name: 'banane' },
-        { id: 2, name: 'apple' },
-        { id: 3, name: 'pear' },
-      ]}
-      />
+    <div className='container'>
+      Hello World
     </div>
   );
 }
 
-ReactDOM.render(<MySite title='site' />, document.querySelector('#target1'));
+// const links = [
+//   { id: '1', label: 'About us', url: '#' },
+//   { id: '2', label: 'Blog', url: '#' },
+//   { id: '3', label: 'Wikipedia', url: '#' },
+// ];
+
+function MyNav({ links }) {
+  return (
+    <nav>
+      {
+        links.map(link => <a key={link.id} href={link.url}>{link.label}</a>)
+      }
+    </nav>
+  );
+}
+
+// const sections = [
+//   { heading: 'Section 1', content: 'content 1', imageUrl },
+//   { heading: 'Section 2', content: 'content 2' },
+//   { heading: 'Section 3', content: 'content 3' },
+// ];
+
+function MySection({ section }) {
+  return (
+    <section>
+      <h3></h3>
+    </section>
+  );
+}
+
+ReactDOM.render(<MyNav links={links} />, document.querySelector('#target1'));
