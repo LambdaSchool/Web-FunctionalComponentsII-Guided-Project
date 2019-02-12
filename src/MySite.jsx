@@ -52,7 +52,7 @@ function Greet({ name, foo }) {
   );
 }
 
-// data-some ari-some -> just like that
+// data-some aria-some -> just like that
 // onclick onscroll   -> camel case it!
 function MySite() {
   return (
