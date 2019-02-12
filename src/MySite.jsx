@@ -44,10 +44,20 @@ function clickHandler() {
   console.log('you clicked');
 }
 
-function Greet({ name, foo }) {
+function Greet({ name, foo, additionalGreetClass }) {
   return (
-    <div className='greet-container'>
+    <div className={`greet-container ${additionalGreetClass}`}>
       Hello {name} {foo}
+    </div>
+  );
+}
+
+function Fruits({ fruits }) {
+  return (
+    <div>
+      {
+        fruits.length > 2 && fruits.map(fruit => <div key={fruit}>{fruit}</div>)
+      }
     </div>
   );
 }
@@ -56,10 +66,16 @@ function Greet({ name, foo }) {
 // onclick onscroll   -> camel case it!
 function MySite() {
   return (
-    <div onClick={clickHandler} data-foo='bar' className='site-container'>
-      <Greet name='Tom' foo='bar' />
+    <div data-friend='Tom'>
+      <Greet additionalGreetClass='pretty' name='Tom' foo='bar' />
+      <Fruits fruits={[
+        { id: 1, name: 'banane' },
+        { id: 2, name: 'apple' },
+        { id: 3, name: 'pear' },
+      ]}
+      />
     </div>
   );
 }
 
-ReactDOM.render(<MySite />, document.querySelector('#target1'));
+ReactDOM.render(<MySite title='site' />, document.querySelector('#target1'));
