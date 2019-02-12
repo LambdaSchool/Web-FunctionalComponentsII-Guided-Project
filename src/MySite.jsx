@@ -82,7 +82,9 @@ function MySection({ section }) {
     <section>
       <h3>{section.heading}</h3>
       <p>{section.content}</p>
-      <img src={section.imageUrl} alt="cat" />
+      {
+        section.imageUrl && <img src={section.imageUrl} alt="cat" />
+      }
     </section>
   );
 }
