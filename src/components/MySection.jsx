@@ -1,4 +1,5 @@
 import React from 'react';
+import './MySection.less';
 
 export default function MySection({ section }) {
   return (
