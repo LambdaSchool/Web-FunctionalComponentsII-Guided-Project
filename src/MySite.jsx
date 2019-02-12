@@ -8,9 +8,9 @@ import './MySite.less';
 const imageUrl = 'https://media.gettyimages.com/photos/domestic-cat-picture-id172727025?s=612x612';
 
 const links = [
-  { id: '1', label: 'About us', url: '#' },
+  { id: '1', label: 'About Cats', url: '#' },
   { id: '2', label: 'Blog', url: '#' },
-  { id: '3', label: 'Wikipedia', url: '#' },
+  { id: '3', label: 'Contact', url: '#' },
 ];
 
 const sections = [
@@ -57,4 +57,4 @@ function MySite({ title }) {
   );
 }
 
-ReactDOM.render(<MySite title="cats" />, document.querySelector('#target1'));
+ReactDOM.render(<MySite title="Cats" />, document.querySelector('#target1'));
