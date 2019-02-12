@@ -1,5 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import MyNav from './components/MyNav';
+import MySection from './components/MySection';
 import './MySite.less';
 
 
@@ -52,40 +54,6 @@ function MySite({ title }) {
         ))
       }
     </div>
-  );
-}
-
-// const links = [
-//   { id: '1', label: 'About us', url: '#' },
-//   { id: '2', label: 'Blog', url: '#' },
-//   { id: '3', label: 'Wikipedia', url: '#' },
-// ];
-
-function MyNav({ links }) {
-  return (
-    <nav>
-      {
-        links.map(link => <a key={link.id} href={link.url}>{link.label}</a>)
-      }
-    </nav>
-  );
-}
-
-// const sections = [
-//   { heading: 'Section 1', content: 'content 1', imageUrl },
-//   { heading: 'Section 2', content: 'content 2' },
-//   { heading: 'Section 3', content: 'content 3' },
-// ];
-
-function MySection({ section }) {
-  return (
-    <section>
-      <h3>{section.heading}</h3>
-      <p>{section.content}</p>
-      {
-        section.imageUrl && <img src={section.imageUrl} alt="cat" />
-      }
-    </section>
   );
 }
 
