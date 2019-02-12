@@ -40,9 +40,26 @@ const sections = [
 
 // 8- use the class syntax for MySite.
 
+function clickHandler() {
+  console.log('you clicked');
+}
 
+function Greet({ name, foo }) {
+  return (
+    <div className='greet-container'>
+      Hello {name} {foo}
+    </div>
+  );
+}
+
+// data-some ari-some -> just like that
+// onclick onscroll   -> camel case it!
 function MySite() {
-  return null;
+  return (
+    <div onClick={clickHandler} data-foo='bar' className='site-container'>
+      <Greet name='Tom' foo='bar' />
+    </div>
+  );
 }
 
 ReactDOM.render(<MySite />, document.querySelector('#target1'));
