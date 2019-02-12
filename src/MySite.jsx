@@ -56,7 +56,9 @@ function Fruits({ fruits }) {
   return (
     <div>
       {
-        fruits.length > 2 && fruits.map(fruit => <div key={fruit}>{fruit}</div>)
+        fruits.length > 2 && fruits.map(
+          fruit => <div key={fruit.id}>{fruit.name}</div>,
+        )
       }
     </div>
   );
