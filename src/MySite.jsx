@@ -41,10 +41,16 @@ const sections = [
 // 8- use the class syntax for MySite.
 
 
-function MySite() {
+function MySite({ title }) {
   return (
     <div className='container'>
-      Hello World
+      <h1>{title}</h1>
+      <MyNav links={links}></MyNav>
+      {
+        sections.map(section => (
+          <MySection key={section.heading} section={section} />
+        ))
+      }
     </div>
   );
 }
@@ -74,9 +80,11 @@ function MyNav({ links }) {
 function MySection({ section }) {
   return (
     <section>
-      <h3></h3>
+      <h3>{section.heading}</h3>
+      <p>{section.content}</p>
+      <img src={section.imageUrl} alt="cat" />
     </section>
   );
 }
 
-ReactDOM.render(<MyNav links={links} />, document.querySelector('#target1'));
+ReactDOM.render(<MySite title="cats" />, document.querySelector('#target1'));
