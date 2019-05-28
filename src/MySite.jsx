@@ -31,10 +31,9 @@ import './MySite.less';
 function MagicLink(props) {
   const { url, label } = props;
 
-  if (label === 'Click Me') {
-    return <a href="">Click Me</a>;
-  }
-  return null;
+  return (
+    <a href={url}>{label}</a>
+  );
 }
 
 const targetElement = document.querySelector('#target1');
