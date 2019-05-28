@@ -29,6 +29,8 @@ import './MySite.less';
 // 9- use the class syntax for MySite.
 
 function MagicLink(props) {
+  // make magic link be able to receive a "bold" prop.
+  // If it exists, make my anchor tag have bold font weight
   const { url, label } = props;
 
   return (
@@ -37,6 +39,6 @@ function MagicLink(props) {
 }
 
 const targetElement = document.querySelector('#target1');
-const nodeToRender = <MagicLink label="Click Me" url="#" />;
+const nodeToRender = <MagicLink label="Click Me" url="#" bold />;
 
 ReactDOM.render(nodeToRender, targetElement);
