@@ -61,12 +61,16 @@ function MagicLink(props) {
 }
 
 function MagicNav(props) {
+  // how do i know from devtools that MagicNav has the right props ????
   return (
     <nav>this is a nav</nav>
   );
 }
-
 const targetElement = document.querySelector('#target1');
-const nodeToRender = <MagicNav />;
+
+// contains objects {id, label, url} // PULL THIS FROM DOM (data-attributes)
+const arrayOfLinks = JSON.parse(targetElement.dataset.links);
+
+const nodeToRender = <MagicNav links={arrayOfLinks} />;
 
 ReactDOM.render(nodeToRender, targetElement);
