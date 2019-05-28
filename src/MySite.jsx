@@ -28,7 +28,12 @@ import './MySite.less';
 
 // 9- use the class syntax for MySite.
 
-const targetElement = document.querySelector('#target1');
-const elementToRender = 'Hello, World!!';
+function MagicLink(props) {
+  const { url, label } = props;
+  return 'hi there';
+}
 
-ReactDOM.render(elementToRender, targetElement);
+const targetElement = document.querySelector('#target1');
+const nodeToRender = <MagicLink url="#" label="Click Me" />;
+
+ReactDOM.render(nodeToRender, targetElement);
