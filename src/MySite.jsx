@@ -60,7 +60,11 @@ function MagicLink(props) {
   );
 }
 
+function MagicNav(props) {
+  return (<nav>this is a nav</nav>);
+}
+
 const targetElement = document.querySelector('#target1');
-const nodeToRender = <MagicLink label="Click Me" url="#" bold />;
+const nodeToRender = <MagicNav />;
 
 ReactDOM.render(nodeToRender, targetElement);
