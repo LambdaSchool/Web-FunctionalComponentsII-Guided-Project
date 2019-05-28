@@ -66,13 +66,13 @@ function MagicNav(props) {
   const { links } = props;
 
   return (
-    <nav>
+    <>
       {
         links.map(link => {
           return <MagicLink label={link.label} url={link.url} />;
         })
       }
-    </nav>
+    </>
   );
 }
 
