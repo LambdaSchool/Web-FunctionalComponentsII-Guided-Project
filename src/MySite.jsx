@@ -1,5 +1,7 @@
-import React, { useState } from 'react';
+import React from 'react';
 import ReactDOM from 'react-dom';
+import MagicLink from './MagicLink';
+import MagicNav from './MagicNav';
 import './MySite.less';
 
 // 1- pull in the data from the DOM
@@ -27,54 +29,6 @@ import './MySite.less';
 // 8- break up the styles so that each component gets its own LESS file.
 
 // 9- use the class syntax for MySite.
-
-function MagicLink(props) {
-  // make magic link be able to receive a "bold" prop.
-  // If it exists, make my anchor tag have bold font weight
-  const { url, label, bold } = props;
-
-  // we need a variable to hold state, and a function we
-  // can use to update this state (2 things)
-
-  // LET'S CREATE slices of state along with their corresponding updaters
-  const [myCount, updateMyCount] = useState(0);
-  const [clicked, setClicked] = useState(false);
-
-  const myStyle = {
-    fontWeight: bold ? 'bold' : 'initial',
-    display: 'block',
-  };
-
-  const clickHandler = () => {
-    setClicked(true);
-    updateMyCount(myCount + 1);
-  };
-
-  return (
-    <a
-      onClick={clickHandler}
-      style={myStyle}
-      href={url}
-    >
-      {label} (Clicked {myCount} times) {clicked ? null : 'PLEASE CLICK ME NOW'}
-    </a>
-  );
-}
-
-function MagicNav(props) {
-  // how do i know from devtools that MagicNav has the right props ????
-  const { links } = props;
-
-  return (
-    <>
-      {
-        links.map((link) => {
-          return <MagicLink key={link.id} label={link.label} url={link.url} />;
-        })
-      }
-    </>
-  );
-}
 
 const targetElement = document.querySelector('#target1');
 
