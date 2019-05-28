@@ -31,10 +31,14 @@ import './MySite.less';
 function MagicLink(props) {
   // make magic link be able to receive a "bold" prop.
   // If it exists, make my anchor tag have bold font weight
-  const { url, label } = props;
+  const { url, label, bold } = props;
+
+  const myStyle = {
+    fontWeight: bold ? 'bold' : 'initial',
+  };
 
   return (
-    <a href={url}>{label}</a>
+    <a style={myStyle} href={url}>{label}</a>
   );
 }
 
