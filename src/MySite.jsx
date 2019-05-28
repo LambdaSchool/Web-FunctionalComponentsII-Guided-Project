@@ -35,14 +35,19 @@ function MagicLink(props) {
 
   // we need a variable to hold state, and a function we
   // can use to update this state (2 things)
-  const [count, setCount] = useState();
+
+  const [myCount, updateMyCount] = useState(0);
 
   const myStyle = {
     fontWeight: bold ? 'bold' : 'initial',
   };
 
+  const clickHandler = () => {
+    console.log('you clicked!!!!!');
+  };
+
   return (
-    <a style={myStyle} href={url}>{label}</a>
+    <a onClick={clickHandler} style={myStyle} href={url}>{label}</a>
   );
 }
 
