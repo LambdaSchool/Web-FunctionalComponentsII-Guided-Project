@@ -62,8 +62,16 @@ function MagicLink(props) {
 
 function MagicNav(props) {
   // how do i know from devtools that MagicNav has the right props ????
+  const { links } = props;
+
   return (
-    <nav>this is a nav</nav>
+    <nav>
+      {
+        links.map(link => {
+          return link.label;
+        })
+      }
+    </nav>
   );
 }
 const targetElement = document.querySelector('#target1');
