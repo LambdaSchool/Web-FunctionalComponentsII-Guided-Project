@@ -37,7 +37,7 @@ function MagicLink(props) {
   // can use to update this state (2 things)
 
   // LET'S CREATE slices of state along with their corresponding updaters
-  const [myCount, updateMyCount] = useState(10);
+  const [myCount, updateMyCount] = useState(0);
   const [clicked, setClicked] = useState(false);
 
   const myStyle = {
