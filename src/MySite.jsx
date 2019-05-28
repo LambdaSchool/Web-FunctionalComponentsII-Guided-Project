@@ -43,11 +43,17 @@ function MagicLink(props) {
   };
 
   const clickHandler = () => {
-    console.log('you clicked!!!!!');
+    updateMyCount(myCount + 1);
   };
 
   return (
-    <a onClick={clickHandler} style={myStyle} href={url}>{label}</a>
+    <a
+      onClick={clickHandler}
+      style={myStyle}
+      href={url}
+    >
+      {label} (Clicked {myCount} times)
+    </a>
   );
 }
 
