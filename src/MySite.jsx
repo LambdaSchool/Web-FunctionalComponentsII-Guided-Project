@@ -42,6 +42,7 @@ function MagicLink(props) {
 
   const myStyle = {
     fontWeight: bold ? 'bold' : 'initial',
+    display: 'block',
   };
 
   const clickHandler = () => {
@@ -68,12 +69,13 @@ function MagicNav(props) {
     <nav>
       {
         links.map(link => {
-          return link.label;
+          return <MagicLink label={link.label} url={link.url} />;
         })
       }
     </nav>
   );
 }
+
 const targetElement = document.querySelector('#target1');
 
 // contains objects {id, label, url} // PULL THIS FROM DOM (data-attributes)
