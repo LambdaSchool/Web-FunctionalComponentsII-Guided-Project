@@ -1,8 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import MagicLink from './MagicLink';
 import MagicNav from './MagicNav';
-import './MySite.less';
+// import './MySite.less';
 
 // 1- pull in the data from the DOM
 
