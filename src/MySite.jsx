@@ -28,7 +28,7 @@ import './MySite.less';
 
 // 9- use the class syntax for MySite.
 
-const target = document.querySelector('#target1');
-const ElementToRender = 'Hello, World!!';
+const targetElement = document.querySelector('#target1');
+const elementToRender = 'Hello, World!!';
 
-ReactDOM.render(ElementToRender, target);
+ReactDOM.render(elementToRender, targetElement);
