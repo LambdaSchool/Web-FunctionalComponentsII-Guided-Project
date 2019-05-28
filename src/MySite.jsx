@@ -36,13 +36,16 @@ function MagicLink(props) {
   // we need a variable to hold state, and a function we
   // can use to update this state (2 things)
 
-  const [myCount, updateMyCount] = useState(0);
+  // LET'S CREATE slices of state along with their corresponding updaters
+  const [myCount, updateMyCount] = useState(10);
+  const [clicked, setClicked] = useState(false);
 
   const myStyle = {
     fontWeight: bold ? 'bold' : 'initial',
   };
 
   const clickHandler = () => {
+    setClicked(true);
     updateMyCount(myCount + 1);
   };
 
@@ -52,7 +55,7 @@ function MagicLink(props) {
       style={myStyle}
       href={url}
     >
-      {label} (Clicked {myCount} times)
+      {label} (Clicked {myCount} times) {clicked ? null : 'PLEASE CLICK ME NOW'}
     </a>
   );
 }
