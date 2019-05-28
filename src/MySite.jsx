@@ -68,7 +68,7 @@ function MagicNav(props) {
   return (
     <>
       {
-        links.map(link => {
+        links.map((link) => {
           return <MagicLink key={link.id} label={link.label} url={link.url} />;
         })
       }
