@@ -2,47 +2,33 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './MySite.less';
 
+// 1- pull in the data from the DOM
 
-const imageUrl = 'https://media.gettyimages.com/photos/domestic-cat-picture-id172727025?s=612x612';
+// 2- implement a Link component that takes url and label props, and returns an anchor tag.
+// Add extra functionality so the Link is not an unnecessary wrapper.
 
-const links = [
-  { id: '1', label: 'About us', url: '#' },
-  { id: '2', label: 'Blog', url: '#' },
-  { id: '3', label: 'Wikipedia', url: '#' },
-];
+// 3- implement a Section component that takes heading, content and optional imageUrl, and returns:
+//   * a section with an h3 with the heading,
+//   * a paragraph with the content,
+//   * an image if imageUrl exists
 
-const sections = [
-  { heading: 'Section 1', content: 'content 1', imageUrl },
-  { heading: 'Section 2', content: 'content 2' },
-  { heading: 'Section 3', content: 'content 3' },
-];
+// 4- implement a Nav component that takes links and returns a nav
 
-// 1- implement a MySite component that returns Hello World
-
-// 2- implement a functional component 'Nav' that takes links and returns a nav
-
-// 3- implement a functional component 'Section' that takes a section, and returns:
-//   * a section with an h3 with the section.heading,
-//   * a paragraph with the section.content,
-//   * an image if section.imageUrl exists
-
-// 4 improve MySite component so it renders
+// 5- improve MySite component so it renders
 //   * a container div
 //   * a header element with an h1 and the Nav
 //   * a section container containing our Sections
 //   * a button that logs a message to the console
 
-// 5- see the props using react devtools
+// 6- see the props using react devtools
 
-// 6- Put each component into its own file
+// 7- Put each component into its own file
 
-// 7- break up the styles so that each component gets its own LESS file.
+// 8- break up the styles so that each component gets its own LESS file.
 
-// 8- use the class syntax for MySite.
+// 9- use the class syntax for MySite.
 
+const target = document.querySelector('#target1');
+const ElementToRender = 'Hello, World!!';
 
-function MySite() {
-  return null;
-}
-
-ReactDOM.render(<MySite />, document.querySelector('#target1'));
+ReactDOM.render(ElementToRender, target);
