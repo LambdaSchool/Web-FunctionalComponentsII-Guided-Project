@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import ReactDOM from 'react-dom';
 import './MySite.less';
 
@@ -32,6 +32,10 @@ function MagicLink(props) {
   // make magic link be able to receive a "bold" prop.
   // If it exists, make my anchor tag have bold font weight
   const { url, label, bold } = props;
+
+  // we need a variable to hold state, and a function we
+  // can use to update this state (2 things)
+  const [count, setCount] = useState();
 
   const myStyle = {
     fontWeight: bold ? 'bold' : 'initial',
