@@ -30,10 +30,14 @@ import './MySite.less';
 
 function MagicLink(props) {
   const { url, label } = props;
-  return 'hi there';
+
+  if (label === 'Click Me') {
+    return <a href="">Click Me</a>;
+  }
+  return null;
 }
 
 const targetElement = document.querySelector('#target1');
-const nodeToRender = <MagicLink url="#" label="Click Me" />;
+const nodeToRender = <MagicLink label="Click Me" url="#" />;
 
 ReactDOM.render(nodeToRender, targetElement);
