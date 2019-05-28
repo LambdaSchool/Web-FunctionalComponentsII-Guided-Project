@@ -61,7 +61,9 @@ function MagicLink(props) {
 }
 
 function MagicNav(props) {
-  return (<nav>this is a nav</nav>);
+  return (
+    <nav>this is a nav</nav>
+  );
 }
 
 const targetElement = document.querySelector('#target1');
